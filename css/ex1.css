@@ -1,0 +1,17 @@
+
+    body{
+        background: #000;
+    }
+    .white{
+        color: #fff;
+    }
+    #main{
+        width: 680px;
+        background: #fff;
+        margin: 0 auto;
+    }
+    header{
+        background: url("../images/wave02.png");
+        border: solid #fff 3px;
+        font-family: 'Times New Roman', Times, serif;
+    }
