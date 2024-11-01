@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VueJS 1</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <ul>
+            <li v-for="item in todos">{{item.text}}<br><img :src="'images/'+item.photo"></li>
+        </ul>
+    </div>
 
 </body>
 <script>
@@ -15,11 +19,18 @@
 
   createApp({
     setup() {
-      const message = ref('Hello vue!!!!')
+
       return {
-        message
+        todos: ref([
+            {text:" Learn Javascript", photo: "header.jpg"},
+            {text: "Learn Vue.js"},
+            {text:"Build somthing awesome"}
+
+        ])
       }
     }
   }).mount('#app')
+
+  
 </script>
 </html>
